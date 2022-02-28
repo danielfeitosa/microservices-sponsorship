@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: sponsorship-config-server
-  profiles:
-    active:
-     - native
+  cloud:
+   config:
+    server:
+      bootstrap: true
+      git:
+       uri: https://github.com/danielfeitosa/microservices-sponsorship
+       default-label: main
+
